@@ -2,6 +2,26 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Convey" Version="0.4.330" />
+      <PackageReference Include="Convey.Discovery.Consul" Version="0.4.330" />
+      <PackageReference Include="Convey.WebApi" Version="0.4.330" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.local.json">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+      <Content Update="appsettings.docker.json">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
+    </ItemGroup>
 
 </Project>
